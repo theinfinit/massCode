@@ -39,6 +39,9 @@ function onClose () {
 .layout-one-column {
   h3 {
     margin: 0;
+    padding: var(--spacing-xs);
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   margin-top: var(--title-bar-height);

@@ -337,6 +337,8 @@ onUnmounted(() => {
   position: relative;
   z-index: 2;
   user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
   &::after {
     content: '';
     height: 1px;
@@ -348,6 +350,7 @@ onUnmounted(() => {
   &.is-focused,
   &.is-selected,
   &.is-highlighted {
+    cursor: default;
     &::before {
       content: '';
       position: absolute;

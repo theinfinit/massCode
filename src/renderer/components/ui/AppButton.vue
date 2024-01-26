@@ -15,6 +15,7 @@
   transition: all 0.2s;
   color: var(--color-text);
   padding: 0 var(--spacing-xs);
+  cursor: pointer;
   &:hover {
     background-color: var(--color-button-hover);
   }

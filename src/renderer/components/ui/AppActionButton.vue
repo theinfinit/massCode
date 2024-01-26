@@ -26,6 +26,7 @@ defineProps<Props>()
   outline: none;
   color: var(--color-text);
   margin-right: 1px;
+  cursor: pointer;
   &:last-child {
     margin-right: 0;
   }

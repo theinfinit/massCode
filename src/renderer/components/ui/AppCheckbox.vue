@@ -47,6 +47,11 @@ const onChange = () => {
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
+    padding: 8px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-left: -4px;
   }
   input {
     display: none;

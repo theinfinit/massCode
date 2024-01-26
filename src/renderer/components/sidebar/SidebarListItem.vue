@@ -199,6 +199,8 @@ watch(
   width: 100%;
   z-index: 2;
   user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
   &.is-system,
   &.is-tag {
     padding-left: var(--spacing-sm);

@@ -36,6 +36,10 @@ defineProps<Props>()
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: var(--spacing-sm);
+  .label {
+    user-select: none;
+    -webkit-user-select: none;
+  }
   .inner {
     display: flex;
     flex-flow: column;

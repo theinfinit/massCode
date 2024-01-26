@@ -48,10 +48,12 @@ const localValue = computed({
     border: 1px solid var(--color-border);
     border-radius: 3px;
     padding: 0 var(--spacing-xs);
+    appearance: none;
     -webkit-appearance: none;
     width: 300px;
     background-color: var(--color-select);
     color: var(--color-text);
+    cursor: pointer;
   }
   :deep(svg) {
     position: absolute;

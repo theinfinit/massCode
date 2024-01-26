@@ -46,8 +46,10 @@ const fragmentHeight = appStore.sizes.editor.fragmentsHeight + 'px'
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     min-width: 100px;
+    cursor: pointer;
     &.is-active {
       background-color: var(--color-contrast-lower);
+      cursor: default;
     }
   }
 }

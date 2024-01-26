@@ -137,6 +137,8 @@ onUnmounted(() => {
   &__title {
     h6 {
       color: var(--color-text);
+      user-select: none;
+      -webkit-user-select: none;
     }
   }
   &__title,
@@ -147,9 +149,12 @@ onUnmounted(() => {
   .tab-header {
     color: var(--color-text-3);
     padding: var(--spacing-xs) 0;
+    user-select: none;
     -webkit-user-select: none;
+    cursor: pointer;
     &.active {
       color: var(--color-text);
+      cursor: default;
     }
     &:after {
       content: '/';

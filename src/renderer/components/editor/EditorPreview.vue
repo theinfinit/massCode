@@ -160,9 +160,6 @@ onMounted(() => {
       display: flex;
       align-items: center;
       gap: var(--spacing-xs);
-      .button {
-        cursor: default;
-      }
     }
   }
   iframe {

@@ -401,9 +401,13 @@ onUnmounted(() => {
   }
 }
 .lang-selector {
+  appearance: none;
   -webkit-appearance: none;
   border: 0;
   outline: none;
   color: var(--color-text);
+  cursor: pointer;
+  padding: 10px;
+  margin-left: -7px;
 }
 </style>

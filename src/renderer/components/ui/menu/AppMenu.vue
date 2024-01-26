@@ -88,6 +88,8 @@ provide(menuKey, {
   .group {
     padding: var(--spacing-xs);
     font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
     &:not(:first-child) {
       padding-top: var(--spacing-sm);
     }
@@ -95,6 +97,7 @@ provide(menuKey, {
   .name {
     padding: var(--spacing-xs);
     user-select: none;
+    cursor: pointer;
     &.is-selected {
       border-radius: 5px;
       background-color: var(--color-menu-selected);
