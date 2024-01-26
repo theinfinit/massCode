@@ -33,8 +33,20 @@
       v-if="!snippetStore.compactMode"
       class="footer"
     >
-      <div class="folder">
-        {{ folder || 'Inbox' }}
+      <div class="tags">
+        <span
+          v-for="(tagName, index) in currentTagNames"
+          :key="index"
+          class="ti-tag"
+        >
+          {{ tagName }}
+        </span>
+      </div>
+      <div
+        v-if="folderStore.selectedAlias"
+        class="folder"
+      >
+        {{ folder || 'Inbox' }}&nbsp;/
       </div>
       <div class="date">
         {{ dateFormat }}
@@ -64,6 +76,7 @@ interface Props {
   id: string
   index: number
   name: string
+  tagIds: string[]
   folder?: string
   date: number
 }
@@ -78,6 +91,13 @@ const appStore = useAppStore()
 const itemRef = ref()
 const isFocused = ref(false)
 const isHighlighted = ref(false)
+
+const currentTagNames = computed(() => {
+  // Filter the tagStore.tags array to only include tags with ids that are present in props.tagIds
+  return tagStore.tags
+    .filter(tag => props.tagIds.includes(tag.id))
+    .map(tag => tag.name) // Map the filtered tags to their names
+})
 
 const isSelected = computed(() => {
   if (snippetStore.selectedId) {
@@ -339,6 +359,11 @@ onUnmounted(() => {
       z-index: 1;
     }
   }
+  &.is-selected {
+    .ti-tag {
+      background-color: var(--color-bg) !important;
+    }
+  }
   &.is-focused {
     &::before {
       background-color: var(--color-primary) !important;
@@ -346,6 +371,9 @@ onUnmounted(() => {
     .name,
     .footer {
       color: #fff !important;
+    }
+    .ti-tag {
+      background-color: var(--color-on-primary) !important;
     }
   }
   &.is-selected {
@@ -400,5 +428,20 @@ onUnmounted(() => {
   justify-content: space-between;
   color: var(--color-text-3);
   padding-top: var(--spacing-sm);
+  align-items: center;
+}
+.folder {
+  margin-right: 3px;
+  white-space: nowrap;
+}
+.tags {
+  gap: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.ti-tag {
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 </style>
