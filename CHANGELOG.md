@@ -1,3 +1,12 @@
+# [3.11.0](https://github.com/massCodeIO/massCode/compare/v3.10.0...v3.11.0) (2024-01-26)
+
+
+### Features
+
+* snippet List is displaying tags for each item ([ce0d746](https://github.com/massCodeIO/massCode/commit/ce0d746d5b10dea97d67545ccbd6c5f5c53c0747))
+
+
+
 # [3.10.0](https://github.com/massCodeIO/massCode/compare/v3.9.0...v3.10.0) (2023-10-12)
 
 
