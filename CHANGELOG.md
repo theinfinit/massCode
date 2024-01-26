@@ -1,4 +1,13 @@
-# [3.11.0](https://github.com/massCodeIO/massCode/compare/v3.10.0...v3.11.0) (2024-01-26)
+# [3.11.1](https://github.com/theinfinit/massCode/compare/v3.11.0...v3.11.1) (2024-01-26)
+
+
+### Features
+
+* `cursor: pointer;` is added for easier navigation 👆 ([d9c0dcd](https://github.com/theinfinit/massCode/commit/d9c0dcdae9cfb392539b24cdc10397de237516cf))
+
+
+
+# [3.11.0](https://github.com/theinfinit/massCode/compare/v3.10.0...v3.11.0) (2024-01-26)
 
 
 ### Features
